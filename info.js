@@ -31,7 +31,10 @@ function shuffleBg (){
     const pool = Object.keys(bg.timeview).filter(e => e.includes(bgVarient))
     const choice2 = Math.random() * pool.length | 0
 
-    return bg.timeview[pool[choice2]]
+    return { 
+        place: bg.name,
+        ...bg.timeview[pool[choice2]]
+    }
 }
 
 module.exports = {
