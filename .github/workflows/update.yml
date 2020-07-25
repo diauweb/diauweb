@@ -17,9 +17,10 @@ jobs:
     - name: Generate files
       run: node .
     - name: Deploy
-      uses: specup/actions-gh-pages@master
+      uses: peaceiris/actions-gh-pages@v3.7.0-5
       with:
         personal_token: ${{ secrets.PAT }}
         publish_dir: ./public
         publish_branch: master
         force_orphan: true
+        exclude_assets: '' 
