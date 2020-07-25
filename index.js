@@ -53,7 +53,7 @@ const standURL = "http://priconesd.nekonikoban.org/stand/img/";
   if (fs.existsSync('./public')) {
     await fs.promises.rmdir('./public', { recursive: true });
   }
-  await fs.promises.mkdir("./public");
+  await fs.promises.mkdir("./public/.github/workflows", { recursive: true });
 
   const stream = fs.createWriteStream("./public/image.png");
   canvas.createPNGStream().pipe(stream);
@@ -65,4 +65,9 @@ const standURL = "http://priconesd.nekonikoban.org/stand/img/";
     bg,
   };
   await fs.promises.writeFile("./public/README.md", Mark.up(raw, context));
+
+  await fs.promises.copyFile(
+    './src/schedule.yml',
+    './public/.github/workflows/schedule.yml'
+  );
 })();

@@ -1,0 +1,16 @@
+name: Scheduled update README
+
+on:
+  schedule:
+    - cron:  '*/15 * * * *'
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Workflow Dispatch
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: 'Update README.md'
+          token: ${{ secrets.PAT }}
+          ref: bake
