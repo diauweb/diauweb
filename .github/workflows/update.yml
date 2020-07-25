@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - bake
-      - trigger
+  workflow_dispatch:
 
 jobs:
   generate:
@@ -14,7 +14,8 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v1
     - run: npm install
-    - run: node .
+    - name: Generate files
+      run: node .
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
@@ -22,3 +23,4 @@ jobs:
         publish_dir: ./public
         publish_branch: master
         force_orphan: true
+        keep_files: true
