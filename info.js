@@ -21,7 +21,7 @@ function shuffleBg (){
     const bg = bgData[choice1]
     const now = new Date().getUTCHours() + 8 % 24
 
-    const bgVarient = 'daytime'
+    let bgVarient = 'daytime'
     if (now >= 16 && now < 20) {
         bgVarient = 'evening'
     } else if (now >= 20 || now < 5){
