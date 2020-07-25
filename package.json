@@ -1,0 +1,17 @@
+{
+  "name": "xd-readme",
+  "version": "1.0.0",
+  "description": "Readme File of Xiaodai",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "canvas": "^2.6.1",
+    "markup-js": "^1.5.21"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diauweb/diauweb.git"
+  },
+  "author": "Xiaodai Dai",
+  "license": "MIT"
+}
