@@ -1,0 +1,26 @@
+name: Update README.md
+
+on:
+  push:
+    branches:
+      - bake
+      - trigger
+  schedule:
+    - cron: '*/15 * * * *'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+    - run: npm install canvas
+    - run: node .
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
+        publish_branch: master
+        force_orphan: true
