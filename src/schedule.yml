@@ -2,7 +2,7 @@ name: Scheduled update README
 
 on:
   schedule:
-    - cron:  '*/15 * * * *'
+    - cron:  '0 * * * *'
 
 jobs:
   trigger:
