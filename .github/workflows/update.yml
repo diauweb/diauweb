@@ -24,3 +24,6 @@ jobs:
         publish_branch: master
         force_orphan: true
         exclude_assets: '' 
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+    
