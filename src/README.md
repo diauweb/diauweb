@@ -3,7 +3,7 @@
 **Hi There!** I'm Xiaodai.
 - :hammer_and_pick: **I'm writing** Node.JS / Java / Python / Vue / C#...
 - :package: **Maintaining** [EtherOJ](//github.com/EtherOJ/EtherOJ), a GitHub-Based OJ
-- :thread: **Making use of** every bit of GitHub, this README is auto updated using GitHub Actions for every hour
+- :thread: **Making use of** every bit of GitHub, this README is auto updated using GitHub Actions every hour
 - :pencil2: **Using** Manjaro / Gnome / Visual Studio Code as production environment
 
 ---
