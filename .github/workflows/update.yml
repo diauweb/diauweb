@@ -3,7 +3,7 @@ name: Update README.md
 on:
   push:
     branches:
-      - bake
+      - bake2
   workflow_dispatch:
 
 jobs:
