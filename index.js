@@ -8,15 +8,15 @@ import sharp from 'sharp'
 const avatar = info.rollDice()
 console.log(avatar)
 
-const canvas = Canvas.createCanvas(640, 732);
+const [paintW, paintH] = [698, 800];
+const canvas = Canvas.createCanvas(paintW, paintH);
 const ctx = canvas.getContext("2d");
 
 const webpImg = Buffer.from(await (await fetch(info.gachaUrlOf(avatar))).arrayBuffer())
-const pngBuf = await sharp(webpImg).toFormat('png').toBuffer()
+const pngBuf = await sharp(webpImg).toFormat('png', { compressionLevel: 0 }).toBuffer()
 const bgImg = await Canvas.loadImage(pngBuf)
-
-const ratio = 732/1024
-ctx.drawImage(bgImg, 0, 0, 2048, 1024, -320, 0, 2048 * ratio, 1024 * ratio);
+const ratio = paintH/bgImg.naturalHeight
+ctx.drawImage(bgImg, 0, 0, 2048, 1024, -320, 0, bgImg.naturalWidth * ratio, bgImg.naturalHeight * ratio);
 
 ctx.save();
 ctx.globalCompositeOperation = "destination-out";
