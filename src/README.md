@@ -8,5 +8,4 @@
 *Latest update: 
 {{generate_date|call>toLocaleDateString}} 
 {{generate_date|call>toLocaleTimeString}}*  
-<i title="{{stand.type}}">Who am I?</i> | 
-<i title="{{bg.place}} {{bg.name}}">Where am I?</i>
+<i title="{{avatar.identifier}}">Who am I?</i>
