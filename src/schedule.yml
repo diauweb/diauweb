@@ -2,7 +2,7 @@ name: Scheduled update README
 
 on:
   schedule:
-    - cron:  '0 * * * *'
+    - cron:  '0,30 * * * *'
 
 jobs:
   trigger:
@@ -13,4 +13,4 @@ jobs:
         with:
           workflow: 'Update README.md'
           token: ${{ secrets.PAT }}
-          ref: bake
+          ref: bake2
