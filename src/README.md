@@ -2,7 +2,7 @@
 
 **Hi There!** I'm Xiaodai.
 - :hammer_and_pick: **I'm writing** Node.JS / Java / Python / Vue / C#...
-- :pencil2: **Using** Manjaro / KDE / Visual Studio Code as production environment
+- :pencil2: **Using** Windows / ArchWSL / Visual Studio Code as production environment
 
 ---
 *Latest update: 
