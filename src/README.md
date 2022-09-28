@@ -1,8 +1,8 @@
 <img align="right" width="45%" src="https://raw.githubusercontent.com/diauweb/diauweb/master/image.png?iv={{generate_date|round}}">
 
 **Hi There!** I'm Xiaodai.
-- :hammer_and_pick: **I'm writing** Node.JS / Java / Python / Vue / C#...
-- :pencil2: **Using** Windows / ArchWSL / Visual Studio Code as production environment
+- :hammer_and_pick: **I'm writing** Node.JS / Java / Python / Svelte / C#...
+- :pencil2: **Using** Windows / ArchWSL / Containers / Visual Studio Code as production environment
 
 ---
 *Latest update: 
