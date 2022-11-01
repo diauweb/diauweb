@@ -12,9 +12,10 @@ const [paintW, paintH] = [698, 800];
 const canvas = Canvas.createCanvas(paintW, paintH);
 const ctx = canvas.getContext("2d");
 
-const webpImg = Buffer.from(await (await fetch(info.gachaUrlOf(avatar))).arrayBuffer())
-const pngBuf = await sharp(webpImg).toFormat('png', { compressionLevel: 0 }).toBuffer()
-const bgImg = await Canvas.loadImage(pngBuf)
+// const webpImg = Buffer.from(await (await fetch(info.gachaUrlOf(avatar))).arrayBuffer())
+// const pngBuf = await sharp(webpImg).toFormat('png', { compressionLevel: 0 }).toBuffer()
+// const bgImg = await Canvas.loadImage(pngBuf)
+const bgImg = await Canvas.loadImage(info.gachaUrlOf(avatar));
 const ratio = paintH/bgImg.naturalHeight
 ctx.drawImage(bgImg, 0, 0, 2048, 1024, -320, 0, bgImg.naturalWidth * ratio, bgImg.naturalHeight * ratio);
 
